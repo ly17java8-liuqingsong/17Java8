@@ -1,30 +1,37 @@
-
---ÉÌÆ·Àà±ğÌí¼Ó
-insert into Category (cname,Description)values('Ê³Æ·Àà','¿ÉÒÔ³ÔµÄ¶«Î÷')
-insert into Category(cname,Description)values('ÈÕÓÃ»¯Æ·','ÈÕ³£ÓÃÆ·')
-insert into Category(cname,Description)values('·ş×°Àà','ÒÂ·ş')
-insert into Category(cname,Description)values('¼ÒµçÀà','')
---É¾³ı
+--æŸ¥è¯¢å•†å“ç±»åˆ«ä¿¡æ¯
 select*from Category
-----ÉÌÆ·Ìí¼Ó
-insert into Ware(Wname,Cid,PurchasePrice,SalesPrice,Amount)values('¸ßÂ¶½àÑÀ¸à',2,'13','20','1000')
-insert into Ware(Wname,Cid,PurchasePrice,SalesPrice,Amount)values('Ï´ÒÂ»ú',4,'1320','3000','500')
-insert into Ware(Wname,Cid,PurchasePrice,SalesPrice,Amount) values ('À±Ìõ',1,'5','10','10000')
-insert into Ware(Wname,Cid,PurchasePrice,SalesPrice,Amount) values ('Ã«ÒÂ',3,'50','280','350')
-insert into Ware(Wname,Cid,PurchasePrice,SalesPrice,Amount) values ('°ÔÍõÏ´·¢Ë®',2,'20','50','1200')
-insert into Ware(Wname,Cid,PurchasePrice,SalesPrice,Amount) values ('Ãæ°ü',1,'2','3','10000')
-insert into Ware(Wname,Cid,PurchasePrice,SalesPrice,Amount) values ('Ï´½à¾«',2,'2','3','10000')
---É¾³ı
+--æŸ¥è¯¢å•†å“æ·»åŠ ä¿¡æ¯
 select*from Ware
-----Ô±¹¤ĞÅÏ¢Ìí¼Ó
-insert into Employee(Ename,Epassword,Remark)values('ĞÏ´Ï','1234567','')
-insert into Employee(Ename,Epassword,Remark)values('Íõ¾ü¿­','1234568','ÀÁ')
-insert into Employee(Ename,Epassword,Remark)values('Àî×ÏæÌ','1234569','')
-insert into Employee(Ename,Epassword,Remark)values('Íõ³£»¢','1234560','')
---É¾³ı
+--æŸ¥è¯¢å‘˜å·¥ä¿¡æ¯
 select*from Employee
-----ÏúÊÛ¼ÇÂ¼
+--æŸ¥è¯¢é”€å”®è®°å½•ä¿¡æ¯
+select*from SalesInfo
+--å•†å“ç±»åˆ«æ·»åŠ 
+insert into Category (cname,Description)values('é£Ÿå“ç±»','å¯ä»¥åƒçš„ä¸œè¥¿')
+insert into Category(cname,Description)values('æ—¥ç”¨åŒ–å“','æ—¥å¸¸ç”¨å“')
+insert into Category(cname,Description)values('æœè£…ç±»','è¡£æœ')
+insert into Category(cname,Description)values('å®¶ç”µç±»','')
+
+----å•†å“æ·»åŠ 
+insert into Ware(Wname,Cid,PurchasePrice,SalesPrice,Amount)values('é«˜éœ²æ´ç‰™è†',2,'13','20','1000')
+insert into Ware(Wname,Cid,PurchasePrice,SalesPrice,Amount)values('æ´—è¡£æœº',4,'1320','3000','500')
+insert into Ware(Wname,Cid,PurchasePrice,SalesPrice,Amount) values ('è¾£æ¡',1,'5','10','10000')
+insert into Ware(Wname,Cid,PurchasePrice,SalesPrice,Amount) values ('æ¯›è¡£',3,'50','280','350')
+insert into Ware(Wname,Cid,PurchasePrice,SalesPrice,Amount) values ('éœ¸ç‹æ´—å‘æ°´',2,'20','50','1200')
+insert into Ware(Wname,Cid,PurchasePrice,SalesPrice,Amount) values ('é¢åŒ…',1,'2','3','10000')
+insert into Ware(Wname,Cid,PurchasePrice,SalesPrice,Amount) values ('æ´—æ´ç²¾',2,'2','3','10000')
+
+----å‘˜å·¥ä¿¡æ¯æ·»åŠ 
+insert into Employee(Ename,Epassword,Remark)values('é‚¢èª','1234567','')
+insert into Employee(Ename,Epassword,Remark)values('ç‹å†›å‡¯','1234568','æ‡’')
+insert into Employee(Ename,Epassword,Remark)values('æç´«å«£','1234569','')
+insert into Employee(Ename,Epassword,Remark)values('ç‹å¸¸è™','1234560','')
+
+----é”€å”®è®°å½•
 insert into SalesInfo(Wid,SalesDate,SalesAmount,Eid)values('4','2017-8-15','50','1021')
 insert into SalesInfo(Wid,SalesDate,SalesAmount,Eid)values('2','2017-8-15','50','1021')
 insert into SalesInfo(Wid,SalesDate,SalesAmount,Eid)values('3','2017-8-15','50','1021')
-insert into SalesInfo(Wid,SalesDate,SalesAmount,Eid)values('5','2017-8-15','50','1021')insert into SalesInfo(Wid,SalesDate,SalesAmount,Eid)values('4','2017-8-15','500','1021')--É¾³ıselect*from SalesInfo
+insert into SalesInfo(Wid,SalesDate,SalesAmount,Eid)values('5','2017-8-15','50','1021')
+insert into SalesInfo(Wid,SalesDate,SalesAmount,Eid)values('4','2017-8-15','500','1021')
+--æŸ¥è¯¢
+select*from SalesInfo
