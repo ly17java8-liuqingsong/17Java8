@@ -28,10 +28,12 @@ insert into Employee(Ename,Epassword,Remark)values('李紫嫣','1234569','')
 insert into Employee(Ename,Epassword,Remark)values('王常虎','1234560','')
 
 ----销售记录
-insert into SalesInfo(Wid,SalesDate,SalesAmount,Eid)values('4','2017-8-15','50','1021')
+update Ware set Amount=Amount-500 where Wname='高露洁牙膏'
+insert into SalesInfo(Wid,SalesDate,SalesAmount,Eid)values('1','2017-8-15','50','1021')
+update Ware set Amount=Amount-50 where Wname='洗衣机'
 insert into SalesInfo(Wid,SalesDate,SalesAmount,Eid)values('2','2017-8-15','50','1021')
+update Ware set Amount=Amount-50 where Wname='辣条'
 insert into SalesInfo(Wid,SalesDate,SalesAmount,Eid)values('3','2017-8-15','50','1021')
-insert into SalesInfo(Wid,SalesDate,SalesAmount,Eid)values('5','2017-8-15','50','1021')
-insert into SalesInfo(Wid,SalesDate,SalesAmount,Eid)values('4','2017-8-15','500','1021')
+
 --查询
 select*from SalesInfo
