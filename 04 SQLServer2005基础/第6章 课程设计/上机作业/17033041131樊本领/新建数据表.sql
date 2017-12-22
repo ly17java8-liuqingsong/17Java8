@@ -1,0 +1,4 @@
+--新建数据表
+--商品类别表
+create table category(
+Cid  int primary key identity(1,1),cname nvarchar(10) not null unique,Description nvarchar(10) )--商品信息表create table Ware(Wid int primary key identity(1,1),Wname nvarchar(10) not null unique,cid int foreign key references category(Cid),	PurchasePrice decimal(10,2)not null,SalesPrice decimal(10,2)not null,Amount decimal(10,2)not null )--员工表	create table Employee(Eid int primary key identity(1001,1),Ename nvarchar(10) not null,Epassword varchar(10) check(len(Epassword)>6),Remark varchar(10) )--销售记录表create table SalesInfo(Sid int primary key identity(1,1),wid	int	foreign key references  Ware(Wid),eid int foreign key references Employee(Eid),SalesDate nvarchar (30) not null,SalesAmount  decimal(10,2) not null )drop table category drop table Waredrop table  Employeedrop table  SalesInfo
