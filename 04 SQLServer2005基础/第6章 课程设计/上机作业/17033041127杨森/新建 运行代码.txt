@@ -1,0 +1,58 @@
+--运行商品类表格
+select*from Catetary
+--运行商品信息表格
+select*from Ware
+--运行员工表
+select*from Employee
+--运行销售记录表
+select*from Salesinfo
+
+--添加商品类表格
+insert into Catetary (cname,Description)values('K-BOXING','服装类')
+insert into Catetary (cname,Description)values('清华书馆','图书类')
+insert into Catetary (cname,Description)values('米奇妙妙屋','饮食类')
+insert into Catetary (cname,Description)values('三星旗舰店','家电类')
+insert into Catetary (cname,Description)values('老凤祥珠宝店','珠宝类')
+
+--添加商品信息表格
+--服装类
+insert into Ware (wname,cid,PurchasePrice,SalesPrice,Amount)values('K-冬季毛衣','1','189','345','23')
+insert into Ware (wname,cid,PurchasePrice,SalesPrice,Amount)values('K-冬季棉鞋','1','89','224','35')
+insert into Ware (wname,cid,PurchasePrice,SalesPrice,Amount)values('K-冬季棉袄','1','237','489','45')
+--图书类
+insert into Ware (wname,cid,PurchasePrice,SalesPrice,Amount)values('一代人','2','1','4','32')
+insert into Ware (wname,cid,PurchasePrice,SalesPrice,Amount)values('人性的优点','2','2.5','9','98')
+insert into Ware (wname,cid,PurchasePrice,SalesPrice,Amount)values('蔷薇','2','1.2','5','94')
+--饮食类
+insert into Ware (wname,cid,PurchasePrice,SalesPrice,Amount)values('金拱门儿童套餐','3','3','9','45')
+insert into Ware (wname,cid,PurchasePrice,SalesPrice,Amount)values('肯德基超值儿童套餐','3','2.5','7','32')
+insert into Ware (wname,cid,PurchasePrice,SalesPrice,Amount)values('卫龙旗舰店辣条','3','1.4','4','224')
+--家电类
+insert into Ware (wname,cid,PurchasePrice,SalesPrice,Amount)values('三星glaxy-S8','4','5400','8999','81')
+insert into Ware (wname,cid,PurchasePrice,SalesPrice,Amount)values('glaxy-S8+','4','6188','9888','12')
+insert into Ware (wname,cid,PurchasePrice,SalesPrice,Amount)values('glaxy-S7','4','4588','7999','19')
+--珠宝类
+insert into Ware (wname,cid,PurchasePrice,SalesPrice,Amount)values('磷叶石吊坠','5','120','300','32')
+insert into Ware (wname,cid,PurchasePrice,SalesPrice,Amount)values('钻石','5','300','500','54')
+insert into Ware (wname,cid,PurchasePrice,SalesPrice,Amount)values('园粒钻石','5','400','600','27')
+--添加员工表
+insert into Employee (Ename,Epassword,Remark)values('张帅','1999458','长的帅')
+insert into Employee (Ename,Epassword,Remark)values('张衡','1999458','长的帅')
+insert into Employee (Ename,Epassword,Remark)values('刘永亮','1999458','长的帅')
+insert into Employee (Ename,Epassword,Remark)values('王怀志','1999458','长的帅')
+insert into Employee (Ename,Epassword,Remark)values('郭敬文','1999458','长的帅')
+
+
+--销售记录
+Update Ware set Amount = Amount-1 where Wname = '一代人'
+Insert into Salesinfo values (4,'2017-1-19',2,1003)
+Update Ware set Amount = Amount-1 where Wname = '人性的优点'
+Insert into Salesinfo values (5,'2017-1-14',1,1001)
+Update Ware set Amount = Amount-1 where Wname = '卫龙旗舰店辣条'
+Insert into Salesinfo values (9,'2017-1-14',1,1001)
+Update Ware set Amount = Amount-1 where Wname = '钻石'
+Insert into Salesinfo values (14,'2017-1-19',2,1003)
+Update Ware set Amount = Amount-1 where Wname = '磷叶石吊坠'
+Insert into Salesinfo values (13,'2017-1-14',1,1001)
+Update Ware set Amount = Amount-1 where Wname = '园粒钻石'
+Insert into Salesinfo values (15,'2017-1-14',1,1001)
