@@ -1,0 +1,40 @@
+
+--创建商品类别表
+create table Catetary (
+Cid int primary key identity(1,1),
+Cname nvarchar(10) not null unique,
+Description nvarchar(20) null
+)
+--创建商品信息表
+create table Ware(
+Wid int primary key identity(1,1),
+Wname nvarchar(20)not null unique,
+Cid int not null foreign key references Catetary(cid),
+PurchasePrice decimal(10,2)not null,
+SalesPrice decimal(10,2)not null,
+Amount int check(len(Amount)>1)
+)
+--创建员工表
+create table Employee(
+Eid int primary key identity(1001,1),
+Ename nvarchar(10)not null,
+Epassword varchar(10)check(len(Epassword)>6),
+Remark nvarchar(20)null
+)
+--销售记录表
+create table Salesinfo(
+Sid int	primary key identity(1,1),
+Wid int not null foreign key references Ware(wid),
+SalesDate datetime not null,
+SalesAmount int check (len(SalesAmount)>0),
+Eid int not null foreign key references Employee(Eid)
+)
+
+--删除商品类别表格（主键）
+drop table Supermarket 
+--删除商品信息表格
+drop table Ware
+--删除员工表格
+drop table Employee
+--删除销售记录表格
+drop table Salesinfo

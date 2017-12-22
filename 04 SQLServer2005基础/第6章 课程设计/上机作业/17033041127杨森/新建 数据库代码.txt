@@ -1,0 +1,17 @@
+create database Supermarket on(
+name = 'Supermarket',
+filename = 'D:\Supermarketmdf',
+size = 3mb,
+maxsize = 50mb,
+filegrowth = 2mb
+)
+
+log on (
+name = 'Supermarketldf',
+filename = 'D:\Supermarket-log.ldf',
+size = 3mb,
+maxsize = 50mb,
+filegrowth = 10%
+)
+
+drop database Supermarket
