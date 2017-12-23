@@ -1,0 +1,6 @@
+--商品类别表（Category）
+  create table Category(
+--主键（cid）
+  Cid int primary key identity(1,1),
+--类型名称（Cname）
+  cname nvarchar(10) not null unique,--类别描述(Description)  Description nvarchar(50) null)--商品信息表（Ware）  create table Ware(--商品的编号，即条形码（Wid）  Wid  int primary key identity(1,1),--商品名称（Wname）  Wname nvarchar(10) not null unique,--商品所属的类别,外键,(Cid)  Cid int not null foreign key references Category(Cid),--商品进价(PurchasePrice)  PurchasePrice decimal(10,2) not null check(PurchasePrice>0),--商品售价(SalesPrice)  SalesPrice decimal(10,2) not null check(SalesPrice>0),--商品库存量(Amount)  Amount int not null check(Amount>0),) --员工表（Employee）  create table Employee(--员工编号（Eid）  Eid int primary key identity(1001,1),--员工姓名（Ename）  Ename nvarchar(10) not null,--员工密码( Epassword )  Epassword varchar(10) check(len(Epassword)>6),--备注( Remark )  Remark nvarchar(50))--销售记录表（SalesInfo）   create table SalesInfo(--主键( Sid )   Sid int primary key identity(1,1),--销售商品的编号,外键，（Wid）  Wid int not null foreign key references Ware(Wid),--商品销售的时间（SalesDate）  SalesDate varchar(30) not null,--商品销售的数量（SalesAmount）  SalesAmount int not null,check(SalesAmount>0),--收银员的编号，外键，（Eid）  Eid int foreign key references Employee(Eid))　　
